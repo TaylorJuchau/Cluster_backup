@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 
 plot_flag = True
 
-nircam_version = 'v1p1p1'
-# nircam_version = 'v0p3p2'
+# nircam_version = 'v1p1p1'
+nircam_version = 'v0p3p2'
 
 target_list = list(getattr(obs_info, 'jwst_obs_band_dict_%s' % nircam_version).keys())
 
