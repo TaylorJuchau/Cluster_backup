@@ -15,7 +15,7 @@ from matplotlib.patches import ConnectionPatch, Ellipse
 from matplotlib import patheffects
 from matplotlib import text as mtext
 import shutil
-if shutil.which('latex') is None:
+if shutil.which('latex') is not None:
     plt.rc('text', usetex=True)
 import astropy.units as u
 from astropy.coordinates import SkyCoord
@@ -591,7 +591,6 @@ class WCSPlottingTools:
             coords_pix = wcs.world_to_pixel(
                 SkyCoord(ra=hull_dict[hull_idx]['ra']*u.deg, dec=hull_dict[hull_idx]['dec']*u.deg))
             ax.plot(coords_pix[0], coords_pix[1], linewidth=line_width, linestyle=line_style, color=color)
-
 
 
 class AxisTools:
